@@ -10,10 +10,29 @@ const config: Config = {
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        primary: "#050505",
+        secondary: "#360058",
+        tertiary: "#282828",
+        light: "#FAFFFD",
+      },
+      fontFamily: {
+        'global': ['"system-ui"'],
+        'cursive': ['"Brush Script MT"'],
+
+      },
+      animation: {
+        'spin-slow': 'spin 12s linear infinite',
+      }
     },
+  },
+  mode: 'jit',
+  corePlugins: {
+    rotate: true,
   },
   plugins: [],
 };
