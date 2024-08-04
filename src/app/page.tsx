@@ -43,18 +43,17 @@ export default function Home() {
         </div>
 
         <div className="w-96 h-96 absolute z-0 opacity-50 hide">
-          <StrippedCircle postAnimation={'home1'} aos={true} noOfStrips={12} startingAngle={0} length={4} breadth={1} isSpinning={true} reverse={false} spinDuration={12} equalSpacing={false} gap={5} opacity={50} />
+          <StrippedCircle postAnimation={'home1'} aos={true} noOfStrips={12} startingAngle={0} length={4} breadth={2} isSpinning={true} reverse={false} spinDuration={12} equalSpacing={false} gap={5} opacity={50} />
         </div>
 
         <div className="w-96 h-96 absolute z-0 opacity-50 hide">
-          <StrippedCircle postAnimation={'home2'} aos={true} noOfStrips={12} startingAngle={180} length={4} breadth={1} isSpinning={true} reverse={false} spinDuration={12} equalSpacing={false} gap={5} opacity={50} />
+          <StrippedCircle postAnimation={'home2'} aos={true} noOfStrips={12} startingAngle={180} length={4} breadth={2} isSpinning={true} reverse={false} spinDuration={12} equalSpacing={false} gap={5} opacity={50} />
         </div>
         <div className="w-[450px] h-[450px] z-0 opacity-50 hide">
           <PartialCircle startingAngle={180} breadth={4} isSpinning={true} spinDuration={12} reverse={true} opacity={50} />
         </div>
         <div className="z-10 absolute hide">
-          <h1 className="text-white text-center text-xl m-2">HI! I AM ROJAN</h1>
-          <h1 className="text-white text-center m-2">A Full Stack Developer Specializing in .NET and React JS</h1>
+          <h1 className="text-white text-center font-nice text-xl m-2">A FULL STACK WEB DEVELOPER</h1>
         </div>
       </div>
       <AboutMe />

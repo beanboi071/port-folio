@@ -79,7 +79,7 @@ export default function StrippedCircle(props: StrippedCircleProps) {
       <div style={{ animation: props.isSpinning ? `spin ${props.spinDuration}s linear infinite` : '', rotate: `${props.startingAngle}deg` }} className={` absolute w-full  h-full rounded-full z-0 `} >
         {Array.from({ length: props.noOfStrips }, (_, i) => (
           <div key={i} className={`top-[50%] absolute w-full h-1 z-0 ${props.aos ? `preAnimation_${props.postAnimation}` : `postAnimation_${props.postAnimation}`}`}>
-            <div className={`h-${props.breadth} w-${props.length} bg-light`}></div>
+            <div className={`h-1 w-4 bg-light`}></div>
 
           </div>
         ))}

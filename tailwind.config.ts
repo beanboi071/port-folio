@@ -23,6 +23,8 @@ const config: Config = {
       fontFamily: {
         'global': ['"system-ui"'],
         'cursive': ['"Brush Script MT"'],
+        'nice': ['"Optima"'],
+
 
       },
       animation: {
