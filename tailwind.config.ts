@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        'instagram': '0 4px 15px rgba(225, 48, 108, 0.5)', // Custom shadow with Instagram color
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
 
@@ -35,6 +38,11 @@ const config: Config = {
   mode: 'jit',
   corePlugins: {
     rotate: true,
+  },
+  variants: {
+    extend: {
+      boxShadow: ['hover'], // Enable hover variant for boxShadow
+    },
   },
   plugins: [],
 };

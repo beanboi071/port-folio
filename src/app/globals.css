@@ -34,14 +34,38 @@ body {
 }
 .hide{
   opacity:0;
-  transition: all 1s;
+  transition: all 3s;
   filter:blur(5px);
   transform: scale(1.2);
+}
+.hideTop{
+  opacity:0;
+  transition: all 3s;
+  filter:blur(5px);
+  transform: scale(1.2) translateY(-50%);
+}
+.hideBottom{
+  opacity:0;
+  transition: all 3s;
+  filter:blur(5px);
+  transform: scale(1.2) translateY(50%);
+}
+.hideLeft{
+  opacity:0;
+  transition: all 3s;
+  filter:blur(5px);
+  transform: scale(1.2) translateX(-50%);
+}
+.hideRight{
+  opacity:0;
+  transition: all 3s;
+  filter:blur(5px);
+  transform: scale(1.2) translateX(50%);
 }
 .show{
   opacity:1;
   filter:blur(0px);
-  transform: scale(1);
+  transform: scale(1) translateY(0) translateX(0);
 
 }
 .flip-y {

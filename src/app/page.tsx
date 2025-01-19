@@ -10,6 +10,16 @@ import { useEffect } from "react";
 import AboutMe from "./components/AboutMe";
 export default function Home() {
 
+  const showSocialLabel =(labelId: string)=>{
+    console.log("show called");
+    const label = document.getElementById(labelId);
+    label?.classList.add('show');
+  }
+  const hideSocialLabel =(labelId: string)=>{
+    console.log("hide called");
+    const label = document.getElementById(labelId);
+    label?.classList.remove('show');
+  }
   const onScrollAnimation = () => {
     const hiddenElements = document.querySelectorAll('.hide');
     const observer = new IntersectionObserver((entries) => {
@@ -30,33 +40,49 @@ export default function Home() {
 
       <div className="flex  min-h-screen min-w-screen items-center justify-center ">
         <div className=" m-4 fixed right-0 flex flex-col gap-4">
-
-          <Link className="social_logo hide" target="_blank" href={'https://www.instagram.com/migo.flamingo/'}><Instagram /></Link>
-
-          <Link className="social_logo hide" target="_blank" href={'https://github.com/rojanshakya071'}><Github /></Link>
-
-          <Link className="social_logo hide" target="_blank" href={'https://www.linkedin.com/in/rojan-shakya-116018243/'}><Linkedin /></Link>
-
+          <div className="flex gap-4 justify-end">
+            <span id="instaLabel" className="hideRight" style={{ transitionDuration: '500ms' }}>migo.flamingo</span>
+            <Link className="social_logo hide"  onMouseEnter={() => showSocialLabel('instaLabel')} 
+            onMouseLeave={() => hideSocialLabel('instaLabel')}  target="_blank" href={'https://www.instagram.com/migo.flamingo/'}>
+              
+              <span 
+              className="hover:text-[#E1306C] hover:shadow-[0_0_10px_#E1306C] ease-in-out"
+              style={{ transitionDuration: '500ms' }}
+              >
+              <Instagram /> 
+              </span>
+            </Link>
+          </div>
+          <div className="flex gap-4 justify-end">
+            <span id="gitLabel" className="hideRight " style={{ transitionDuration: '500ms' }}>rojanshakya071</span>
+          <Link className="social_logo hide hover:text-[#4078C0] hover:scale-125" style={{ transitionDuration: '500ms' }} onMouseEnter={() => showSocialLabel('gitLabel')} 
+            onMouseLeave={() => hideSocialLabel('gitLabel')} target="_blank" href={'https://github.com/rojanshakya071'}><Github /></Link>
+          </div>
+          <div className="flex gap-4 justify-end">
+            <span id="linkedInLabel" className="hideRight" style={{ transitionDuration: '500ms' }}>Rojan Shakya</span>
+          <Link className="social_logo hide hover:text-[#E1306C] hover:scale-125" style={{ transitionDuration: '500ms' }} onMouseEnter={() => showSocialLabel('linkedInLabel')} 
+            onMouseLeave={() => hideSocialLabel('linkedInLabel')} target="_blank" href={'https://www.linkedin.com/in/rojan-shakya-116018243/'}><Linkedin /></Link>
+          </div>
 
         </div>
         <div className="absolute border-solid border-2 border-tertiary w-72 h-72 rounded-full z-0">
         </div>
 
         <div className="w-96 h-96 absolute z-0 opacity-50 hide">
-          <StrippedCircle postAnimation={'home1'} aos={true} noOfStrips={12} startingAngle={0} length={4} breadth={2} isSpinning={true} reverse={false} spinDuration={12} equalSpacing={false} gap={5} opacity={50} />
+          <StrippedCircle postAnimation={'home1'} aos={true} noOfStrips={12} startingAngle={0} length={4} breadth={2} isSpinning={true} reverse={false} spinDuration={8} equalSpacing={false} gap={5} opacity={50} />
         </div>
 
         <div className="w-96 h-96 absolute z-0 opacity-50 hide">
-          <StrippedCircle postAnimation={'home2'} aos={true} noOfStrips={12} startingAngle={180} length={4} breadth={2} isSpinning={true} reverse={false} spinDuration={12} equalSpacing={false} gap={5} opacity={50} />
+          <StrippedCircle postAnimation={'home2'} aos={true} noOfStrips={12} startingAngle={180} length={4} breadth={2} isSpinning={true} reverse={false} spinDuration={8} equalSpacing={false} gap={5} opacity={50} />
         </div>
         <div className="w-[450px] h-[450px] z-0 opacity-50 hide">
-          <PartialCircle startingAngle={180} breadth={4} isSpinning={true} spinDuration={12} reverse={true} opacity={50} />
+          <PartialCircle startingAngle={180} breadth={4} isSpinning={true} spinDuration={10} reverse={true} opacity={50} />
         </div>
         <div className="z-10 absolute hide">
-          <h1 className="text-white text-center font-nice text-xl m-2">A FULL STACK WEB DEVELOPER</h1>
+          <h1 className="text-white text-center text-xl m-2">A FULL STACK WEB DEVELOPER</h1>
         </div>
       </div>
-      <AboutMe />
+     
     </main >
   );
 }
