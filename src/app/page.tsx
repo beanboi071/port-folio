@@ -41,17 +41,9 @@ export default function Home() {
       <div className="flex  min-h-screen min-w-screen items-center justify-center ">
         <div className=" m-4 fixed right-0 flex flex-col gap-4">
           <div className="flex gap-4 justify-end">
-            <span id="instaLabel" className="hideRight" style={{ transitionDuration: '500ms' }}>migo.flamingo</span>
-            <Link className="social_logo hide"  onMouseEnter={() => showSocialLabel('instaLabel')} 
-            onMouseLeave={() => hideSocialLabel('instaLabel')}  target="_blank" href={'https://www.instagram.com/migo.flamingo/'}>
-              
-              <span 
-              className="hover:text-[#E1306C] hover:shadow-[0_0_10px_#E1306C] ease-in-out"
-              style={{ transitionDuration: '500ms' }}
-              >
-              <Instagram /> 
-              </span>
-            </Link>
+            <span id="instaLabel" className="hideRight " style={{ transitionDuration: '500ms' }}>migo.flamingo</span>
+          <Link className="social_logo hide hover:text-[#E1306C] hover:scale-125" style={{ transitionDuration: '500ms' }} onMouseEnter={() => showSocialLabel('instaLabel')} 
+            onMouseLeave={() => hideSocialLabel('instaLabel')} target="_blank" href={'https://www.instagram.com/migo.flamingo/'}><Instagram /></Link>
           </div>
           <div className="flex gap-4 justify-end">
             <span id="gitLabel" className="hideRight " style={{ transitionDuration: '500ms' }}>rojanshakya071</span>
@@ -60,7 +52,7 @@ export default function Home() {
           </div>
           <div className="flex gap-4 justify-end">
             <span id="linkedInLabel" className="hideRight" style={{ transitionDuration: '500ms' }}>Rojan Shakya</span>
-          <Link className="social_logo hide hover:text-[#E1306C] hover:scale-125" style={{ transitionDuration: '500ms' }} onMouseEnter={() => showSocialLabel('linkedInLabel')} 
+          <Link className="social_logo hide hover:text-[#0A66C2] hover:scale-125" style={{ transitionDuration: '500ms' }} onMouseEnter={() => showSocialLabel('linkedInLabel')} 
             onMouseLeave={() => hideSocialLabel('linkedInLabel')} target="_blank" href={'https://www.linkedin.com/in/rojan-shakya-116018243/'}><Linkedin /></Link>
           </div>
 
