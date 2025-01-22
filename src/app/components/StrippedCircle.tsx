@@ -50,22 +50,20 @@ export default function StrippedCircle(props: StrippedCircleProps) {
   }, []);
 
   useEffect(() => {
-    // console.log('called', isObserved);
     if (gap > 0) {
       const elements = document.querySelectorAll(`.postAnimation_${props.postAnimation}`) as NodeListOf<HTMLElement>;
       elements.forEach((e, index, array) => {
-        // console.log(index, gap, props.startingAngle, index * gap);
         e.style.transform = `rotate(${(index * gap)}deg)`;
         e.style.transitionDelay = `${index * 0.15}s`
-        //e.style.transition = 'all 1s'
+  
       })
     }
 
   }, [gap, isObserved])
 
   return (
-    <div className={`w-full ${props.reverse && 'flip-x'} h-full absolute object-contain opacity-${props.opacity} `} style={{
-
+    <div className={`w-full ${props.reverse && 'flip-x'} h-full absolute object-contain `} style={{
+opacity:props.opacity
 
     }}>
       <style>

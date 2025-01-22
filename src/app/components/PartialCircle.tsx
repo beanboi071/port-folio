@@ -22,7 +22,8 @@ export default function PartialCircle(props: PartialCircleProps) {
         }
     `}
       </style>
-      <div style={{ animation: props.isSpinning ? `spin ${props.spinDuration}s ${props.reverse ? 'reverse' : ''} linear infinite` : '' }} className={` border-4 border-t-primary border-b-primary absolute w-full h-full rounded-full z-0 opacity-${props.opacity}`}>
+      <div style={{ animation: props.isSpinning ? `spin ${props.spinDuration}s ${props.reverse ? 'reverse' : ''} linear infinite` : '',  
+    opacity:props.opacity  }} className={` border-4 border-t-primary border-b-primary absolute w-full h-full rounded-full z-0 `}>
 
       </div>
 

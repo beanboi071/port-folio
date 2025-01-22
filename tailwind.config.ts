@@ -8,6 +8,7 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      
       boxShadow: {
         'instagram': '0 4px 15px rgba(225, 48, 108, 0.5)', // Custom shadow with Instagram color
       },
@@ -26,7 +27,7 @@ const config: Config = {
       fontFamily: {
         'global': ['"system-ui"'],
         'cursive': ['"Brush Script MT"'],
-        'nice': ['"Optima"'],
+        'nice': ['"Open Sans"'],
 
 
       },

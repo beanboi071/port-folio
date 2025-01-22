@@ -8,6 +8,7 @@ import Linkedin from "./components/icons/Linkedin";
 import PartialCircle from "./components/PartialCircle";
 import { useEffect } from "react";
 import AboutMe from "./components/AboutMe";
+import ObservableComponent from "./components/ObservableComponent";
 export default function Home() {
 
   const showSocialLabel =(labelId: string)=>{
@@ -36,10 +37,15 @@ export default function Home() {
   }, [])
 
   return (
-    <main className="flex-col min-h-screen min-w-screen items-center text-white justify-center bg-primary">
+    <main className="flex-col min-h-screen min-w-screen items-center text-white justify-center bg-primary overflow-hidden">
 
       <div className="flex  min-h-screen min-w-screen items-center justify-center ">
-        <div className=" m-4 fixed right-0 flex flex-col gap-4">
+<div className="fixed right-0">
+      
+      <ObservableComponent>
+        
+        <div className=" m-4 fixed right-0 flex flex-col gap-4 ">
+          
           <div className="flex gap-4 justify-end">
             <span id="instaLabel" className="hideRight " style={{ transitionDuration: '500ms' }}>migo.flamingo</span>
           <Link className="social_logo hide hover:text-[#E1306C] hover:scale-125" style={{ transitionDuration: '500ms' }} onMouseEnter={() => showSocialLabel('instaLabel')} 
@@ -57,21 +63,29 @@ export default function Home() {
           </div>
 
         </div>
-        <div className="absolute border-solid border-2 border-tertiary w-72 h-72 rounded-full z-0">
+        </ObservableComponent>
+</div>
+        <div className="absolute border-solid border-2 border-tertiary w-72 h-72 rounded-full z-0 hide">
         </div>
 
         <div className="w-96 h-96 absolute z-0 opacity-50 hide">
-          <StrippedCircle postAnimation={'home1'} aos={true} noOfStrips={12} startingAngle={0} length={4} breadth={2} isSpinning={true} reverse={false} spinDuration={8} equalSpacing={false} gap={5} opacity={50} />
+          <StrippedCircle postAnimation={'home1'} aos={true} noOfStrips={12} startingAngle={0} length={4} breadth={2} isSpinning={true} reverse={false} spinDuration={8} equalSpacing={false} gap={5} opacity={0.3} />
         </div>
 
         <div className="w-96 h-96 absolute z-0 opacity-50 hide">
-          <StrippedCircle postAnimation={'home2'} aos={true} noOfStrips={12} startingAngle={180} length={4} breadth={2} isSpinning={true} reverse={false} spinDuration={8} equalSpacing={false} gap={5} opacity={50} />
+          <StrippedCircle postAnimation={'home2'} aos={true} noOfStrips={12} startingAngle={180} length={4} breadth={2} isSpinning={true} reverse={false} spinDuration={8} equalSpacing={false} gap={5} opacity={0.3} />
         </div>
         <div className="w-[450px] h-[450px] z-0 opacity-50 hide">
-          <PartialCircle startingAngle={180} breadth={4} isSpinning={true} spinDuration={10} reverse={true} opacity={50} />
+          <PartialCircle startingAngle={180} breadth={4} isSpinning={true} spinDuration={10} reverse={true} opacity={0.3} />
         </div>
-        <div className="z-10 absolute hide">
-          <h1 className="text-white text-center text-xl m-2">A FULL STACK WEB DEVELOPER</h1>
+        <div className="z-10 absolute ">
+          <h1 className="text-white  text-center text-2xl m-2 glow">
+            <span className="hide cheesy_quote">WEAVING </span> 
+            <span className="hide cheesy_quote">LOGIC </span>
+            <span className="hide cheesy_quote">INTO </span>
+            <span className="hide cheesy_quote">DIGITAL </span>
+            <span className="hide cheesy_quote">NARRATIVES </span>   
+          </h1>
         </div>
       </div>
      
