@@ -39,10 +39,10 @@ export default function Home() {
   return (
     <main className="flex-col min-h-screen min-w-screen items-center text-white justify-center bg-primary overflow-hidden ">
 
-      <div className="flex  min-h-screen min-w-screen items-center justify-center  ">
+      <div className="flex  min-h-screen min-w-screen items-center justify-center  overflow-hidden">
 
 
-        <div className=" m-4 fixed right-0 flex flex-col gap-4 hidden  md:flex">
+        <div className=" m-4 fixed right-0 flex flex-col gap-4 hidden  md:flex overflow-hidden">
 
           <div className="flex social_logo hide gap-4 justify-end">
             <span id="instaLabel" className="hideRight glow" style={{ transitionDuration: '500ms' }}>migo.flamingo</span>
@@ -62,22 +62,25 @@ export default function Home() {
 
         </div>
 
-        <div className="  flex items-center justify-center ">
+        <div className="  flex items-center justify-center overflow-hidden">
 
-          <div className="absolute border-solid border-2 border-tertiary w-72 h-72 rounded-full z-0 hide">
+          <div className="absolute border-solid border-2 border-tertiary w-40 h-40 md:w-72 md:h-72 rounded-full z-0 hide">
           </div>
 
-          <div className="w-96 h-96 absolute z-0 opacity-50 hide">
+          <div className="w-64 h-64 md:w-96 md:h-96 absolute z-0 opacity-50 hide">
             <StrippedCircle postAnimation={'home1'} aos={true} noOfStrips={12} startingAngle={0} length={4} breadth={2} isSpinning={true} reverse={false} spinDuration={8} equalSpacing={false} gap={5} opacity={0.3} />
           </div>
 
-          <div className="w-96 h-96 absolute z-0 opacity-50 hide">
+          <div className="w-64 h-64 md:w-96 md:h-96 absolute z-0 opacity-50 hide">
             <StrippedCircle postAnimation={'home2'} aos={true} noOfStrips={12} startingAngle={180} length={4} breadth={2} isSpinning={true} reverse={false} spinDuration={8} equalSpacing={false} gap={5} opacity={0.3} />
           </div>
-          <div className="w-[450px] h-[450px] z-0 opacity-50 hide">
+          <div className=" w-72 h-72 md:w-[450px] md:h-[450px] z-0 opacity-50 hide">
             <PartialCircle startingAngle={180} breadth={4} isSpinning={true} spinDuration={10} reverse={true} opacity={0.3} />
           </div>
-          <div className="blink w-96 z-10 absolute hide text-white nameSlider font-futuristic flex items-center justify-center text-center text-4xl m-2 glow">
+          <div className="absolute overflow-contain">
+
+          
+          <div className="blink w-96 z-10  overflow-contain  hide text-white nameSlider font-futuristic flex items-center justify-center text-center text-2xl md:text-4xl m-2 glow ">
 
             <h1 className="opacity-0 absolute">Rojan Shakya</h1>
             <h1 className="opacity-0 absolute">रोजन शाक्य</h1>
@@ -86,6 +89,7 @@ export default function Home() {
             <h1 className="opacity-0 absolute">Rojan Shakya</h1>
             <h1 className="opacity-0 absolute">로잔 샤크야</h1>
 
+          </div>
           </div>
         </div>
       </div>
