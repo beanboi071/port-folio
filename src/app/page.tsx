@@ -11,12 +11,12 @@ import AboutMe from "./components/AboutMe";
 import ObservableComponent from "./components/ObservableComponent";
 export default function Home() {
 
-  const showSocialLabel =(labelId: string)=>{
+  const showSocialLabel = (labelId: string) => {
     console.log("show called");
     const label = document.getElementById(labelId);
     label?.classList.add('show');
   }
-  const hideSocialLabel =(labelId: string)=>{
+  const hideSocialLabel = (labelId: string) => {
     console.log("hide called");
     const label = document.getElementById(labelId);
     label?.classList.remove('show');
@@ -40,28 +40,28 @@ export default function Home() {
     <main className="flex-col min-h-screen min-w-screen items-center text-white justify-center bg-primary overflow-hidden">
 
       <div className="flex  min-h-screen min-w-screen items-center justify-center ">
-  
-        
+
+
         <div className=" m-4 fixed right-0 flex flex-col gap-4 ">
-          
+
           <div className="flex social_logo hide gap-4 justify-end">
             <span id="instaLabel" className="hideRight glow" style={{ transitionDuration: '500ms' }}>migo.flamingo</span>
-          <Link className=" hide hover:text-[#E1306C] hover:scale-125 " style={{ transitionDuration: '500ms' }} onMouseEnter={() => showSocialLabel('instaLabel')} 
-            onMouseLeave={() => hideSocialLabel('instaLabel')} target="_blank" href={'https://www.instagram.com/migo.flamingo/'}><Instagram /></Link>
+            <Link className=" hide hover:text-[#E1306C] hover:scale-125 " style={{ transitionDuration: '500ms' }} onMouseEnter={() => showSocialLabel('instaLabel')}
+              onMouseLeave={() => hideSocialLabel('instaLabel')} target="_blank" href={'https://www.instagram.com/migo.flamingo/'}><Instagram /></Link>
           </div>
           <div className="flex social_logo hide gap-4 justify-end">
             <span id="gitLabel" className="hideRight glow" style={{ transitionDuration: '500ms' }}>rojanshakya071</span>
-          <Link className=" hide hover:text-[#4078C0] hover:scale-125" style={{ transitionDuration: '500ms' }} onMouseEnter={() => showSocialLabel('gitLabel')} 
-            onMouseLeave={() => hideSocialLabel('gitLabel')} target="_blank" href={'https://github.com/rojanshakya071'}><Github /></Link>
+            <Link className=" hide hover:text-[#4078C0] hover:scale-125" style={{ transitionDuration: '500ms' }} onMouseEnter={() => showSocialLabel('gitLabel')}
+              onMouseLeave={() => hideSocialLabel('gitLabel')} target="_blank" href={'https://github.com/rojanshakya071'}><Github /></Link>
           </div>
           <div className="flex social_logo hide gap-4 justify-end">
             <span id="linkedInLabel" className="hideRight glow" style={{ transitionDuration: '500ms' }}>Rojan Shakya</span>
-          <Link className=" hide hover:text-[#0A66C2] hover:scale-125" style={{ transitionDuration: '500ms' }} onMouseEnter={() => showSocialLabel('linkedInLabel')} 
-            onMouseLeave={() => hideSocialLabel('linkedInLabel')} target="_blank" href={'https://www.linkedin.com/in/rojan-shakya-116018243/'}><Linkedin /></Link>
+            <Link className=" hide hover:text-[#0A66C2] hover:scale-125" style={{ transitionDuration: '500ms' }} onMouseEnter={() => showSocialLabel('linkedInLabel')}
+              onMouseLeave={() => hideSocialLabel('linkedInLabel')} target="_blank" href={'https://www.linkedin.com/in/rojan-shakya-116018243/'}><Linkedin /></Link>
           </div>
 
         </div>
-   
+
         <div className="absolute border-solid border-2 border-tertiary w-72 h-72 rounded-full z-0 hide">
         </div>
 
@@ -75,13 +75,18 @@ export default function Home() {
         <div className="w-[450px] h-[450px] z-0 opacity-50 hide">
           <PartialCircle startingAngle={180} breadth={4} isSpinning={true} spinDuration={10} reverse={true} opacity={0.3} />
         </div>
-        <div className="z-10 absolute ">
-          <h1 className="text-white hideCheesyQuote text-center text-2xl m-2 glow">
-           WEAVING LOGIC INTO DIGITAL NARRATIVES   
-          </h1>
+        <div className="blink w-96 z-10 absolute hide text-white nameSlider flex items-center justify-center text-center text-4xl m-2 glow">
+     
+            <h1 className="opacity-0 absolute">Rojan Shakya</h1>
+            <h1 className="opacity-0 absolute">रोजन शाक्य</h1>
+            <h1 className="opacity-0 absolute">Rojan Shakya</h1>
+            <h1 className="opacity-0 absolute">ロジャン・シャキャ</h1>
+            <h1 className="opacity-0 absolute">Rojan Shakya</h1>
+            <h1 className="opacity-0 absolute">로잔 샤크야</h1>
+  
         </div>
       </div>
-     
+
     </main >
   );
 }
