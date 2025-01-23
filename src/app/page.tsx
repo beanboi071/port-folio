@@ -75,7 +75,7 @@ export default function Home() {
         <div className="w-[450px] h-[450px] z-0 opacity-50 hide">
           <PartialCircle startingAngle={180} breadth={4} isSpinning={true} spinDuration={10} reverse={true} opacity={0.3} />
         </div>
-        <div className="blink w-96 z-10 absolute hide text-white nameSlider flex items-center justify-center text-center text-4xl m-2 glow">
+        <div className="blink w-96 z-10 absolute hide text-white nameSlider font-futuristic flex items-center justify-center text-center text-4xl m-2 glow">
      
             <h1 className="opacity-0 absolute">Rojan Shakya</h1>
             <h1 className="opacity-0 absolute">रोजन शाक्य</h1>

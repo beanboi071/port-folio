@@ -28,8 +28,7 @@ const config: Config = {
         'global': ['"system-ui"'],
         'cursive': ['"Brush Script MT"'],
         'nice': ['"Open Sans"'],
-
-
+        'futuristic': ['"Eurostile"']
       },
       animation: {
         'spin-slow': 'spin 12s linear infinite',

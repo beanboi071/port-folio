@@ -112,7 +112,10 @@ body {
   0%, 16% { opacity: 1; } /* Fully visible */
   17%, 100% { opacity: 0; } /* Stay visible */
 }
-
+@font-face {
+  font-family: 'Eurostile';
+  src: url('/fonts/eurostile.TTF') format('truetype');
+}
 /* Apply animation to each h1 with a delay for each */
 .nameSlider h1:nth-child(1) { animation: nameSlider 18s infinite; }
 .nameSlider h1:nth-child(2) { animation: nameSlider 18s infinite 3s; }
