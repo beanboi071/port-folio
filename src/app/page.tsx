@@ -22,7 +22,7 @@ export default function Home() {
     label?.classList.remove('show');
   }
   const onScrollAnimation = () => {
-    const hiddenElements = document.querySelectorAll('.hide');
+    const hiddenElements = document.querySelectorAll('.hide, .hideCheesyQuote');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -40,31 +40,28 @@ export default function Home() {
     <main className="flex-col min-h-screen min-w-screen items-center text-white justify-center bg-primary overflow-hidden">
 
       <div className="flex  min-h-screen min-w-screen items-center justify-center ">
-<div className="fixed right-0">
-      
-      <ObservableComponent>
+  
         
         <div className=" m-4 fixed right-0 flex flex-col gap-4 ">
           
-          <div className="flex gap-4 justify-end">
-            <span id="instaLabel" className="hideRight " style={{ transitionDuration: '500ms' }}>migo.flamingo</span>
-          <Link className="social_logo hide hover:text-[#E1306C] hover:scale-125" style={{ transitionDuration: '500ms' }} onMouseEnter={() => showSocialLabel('instaLabel')} 
+          <div className="flex social_logo hide gap-4 justify-end">
+            <span id="instaLabel" className="hideRight glow" style={{ transitionDuration: '500ms' }}>migo.flamingo</span>
+          <Link className=" hide hover:text-[#E1306C] hover:scale-125 " style={{ transitionDuration: '500ms' }} onMouseEnter={() => showSocialLabel('instaLabel')} 
             onMouseLeave={() => hideSocialLabel('instaLabel')} target="_blank" href={'https://www.instagram.com/migo.flamingo/'}><Instagram /></Link>
           </div>
-          <div className="flex gap-4 justify-end">
-            <span id="gitLabel" className="hideRight " style={{ transitionDuration: '500ms' }}>rojanshakya071</span>
-          <Link className="social_logo hide hover:text-[#4078C0] hover:scale-125" style={{ transitionDuration: '500ms' }} onMouseEnter={() => showSocialLabel('gitLabel')} 
+          <div className="flex social_logo hide gap-4 justify-end">
+            <span id="gitLabel" className="hideRight glow" style={{ transitionDuration: '500ms' }}>rojanshakya071</span>
+          <Link className=" hide hover:text-[#4078C0] hover:scale-125" style={{ transitionDuration: '500ms' }} onMouseEnter={() => showSocialLabel('gitLabel')} 
             onMouseLeave={() => hideSocialLabel('gitLabel')} target="_blank" href={'https://github.com/rojanshakya071'}><Github /></Link>
           </div>
-          <div className="flex gap-4 justify-end">
-            <span id="linkedInLabel" className="hideRight" style={{ transitionDuration: '500ms' }}>Rojan Shakya</span>
-          <Link className="social_logo hide hover:text-[#0A66C2] hover:scale-125" style={{ transitionDuration: '500ms' }} onMouseEnter={() => showSocialLabel('linkedInLabel')} 
+          <div className="flex social_logo hide gap-4 justify-end">
+            <span id="linkedInLabel" className="hideRight glow" style={{ transitionDuration: '500ms' }}>Rojan Shakya</span>
+          <Link className=" hide hover:text-[#0A66C2] hover:scale-125" style={{ transitionDuration: '500ms' }} onMouseEnter={() => showSocialLabel('linkedInLabel')} 
             onMouseLeave={() => hideSocialLabel('linkedInLabel')} target="_blank" href={'https://www.linkedin.com/in/rojan-shakya-116018243/'}><Linkedin /></Link>
           </div>
 
         </div>
-        </ObservableComponent>
-</div>
+   
         <div className="absolute border-solid border-2 border-tertiary w-72 h-72 rounded-full z-0 hide">
         </div>
 
@@ -79,12 +76,8 @@ export default function Home() {
           <PartialCircle startingAngle={180} breadth={4} isSpinning={true} spinDuration={10} reverse={true} opacity={0.3} />
         </div>
         <div className="z-10 absolute ">
-          <h1 className="text-white  text-center text-2xl m-2 glow">
-            <span className="hide cheesy_quote">WEAVING </span> 
-            <span className="hide cheesy_quote">LOGIC </span>
-            <span className="hide cheesy_quote">INTO </span>
-            <span className="hide cheesy_quote">DIGITAL </span>
-            <span className="hide cheesy_quote">NARRATIVES </span>   
+          <h1 className="text-white hideCheesyQuote text-center text-2xl m-2 glow">
+           WEAVING LOGIC INTO DIGITAL NARRATIVES   
           </h1>
         </div>
       </div>
