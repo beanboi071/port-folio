@@ -42,7 +42,7 @@ export default function Home() {
       <div className="flex  min-h-screen min-w-screen items-center justify-center  overflow-hidden">
 
 
-        <div className=" m-4 fixed right-0 flex flex-col gap-4 hidden  md:flex overflow-hidden">
+        <div className=" m-4 fixed right-0 flex flex-col gap-4 hidden  md:flex ">
 
           <div className="flex social_logo hide gap-4 justify-end">
             <span id="instaLabel" className="hideRight glow" style={{ transitionDuration: '500ms' }}>migo.flamingo</span>
@@ -62,7 +62,7 @@ export default function Home() {
 
         </div>
 
-        <div className="  flex items-center justify-center overflow-hidden">
+        <div className="  flex items-center justify-center">
 
           <div className="absolute border-solid border-2 border-tertiary w-40 h-40 md:w-72 md:h-72 rounded-full z-0 hide">
           </div>
@@ -77,10 +77,10 @@ export default function Home() {
           <div className=" w-72 h-72 md:w-[450px] md:h-[450px] z-0 opacity-50 hide">
             <PartialCircle startingAngle={180} breadth={4} isSpinning={true} spinDuration={10} reverse={true} opacity={0.3} />
           </div>
-          <div className="absolute overflow-contain">
+          <div className="absolute ">
 
           
-          <div className="blink w-96 z-10  overflow-contain  hide text-white nameSlider font-futuristic flex items-center justify-center text-center text-2xl md:text-4xl m-2 glow ">
+          <div className="blink w-96 z-10    hide text-white nameSlider font-futuristic flex items-center justify-center text-center text-2xl md:text-4xl m-2 glow ">
 
             <h1 className="opacity-0 absolute">Rojan Shakya</h1>
             <h1 className="opacity-0 absolute">रोजन शाक्य</h1>
